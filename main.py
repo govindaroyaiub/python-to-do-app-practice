@@ -7,13 +7,12 @@ while True:
     match user_action:
         case 'add':
             todo = input("Enter a todo: ")
-            todos.append((todo))
+            todos.append(todo)
 
         case 'show' | 'display':
-            lenth = len(todos)
-            if(lenth == 0):
+            length = len(todos)
+            if length == 0:
                 print("Hey, you have not added any todos yet!")
-                user_action
             else:
                 for index, value in enumerate(todos):
                     index = index + 1
@@ -27,10 +26,9 @@ while True:
             todos[number] = new_todo
 
         case 'delete' | 'remove':
-            lenth = len(todos)
-            if(lenth == 0):
+            length = len(todos)
+            if length == 0:
                 print("Hey, you have not added any todos yet!")
-                user_action
             else:
                 for index, value in enumerate(todos):
                     index = index + 1
